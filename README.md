@@ -9,7 +9,7 @@ There are two separate data sets: the control and test groups.
 ### ```Tests Used:  ```
 
 - First of all, the data is used to check the assumptions.
-normality assumption and homogeneity of variance were made.
+Normality assumption and homogeneity of variance were made.
 
 - As a result of the p-value values obtained, it is greater than 0.05
 Therefore, it was concluded that H0 could not be rejected.
@@ -21,7 +21,7 @@ Therefore, it was concluded that H0 could not be rejected.
 ### ``` Advice to the company:```
 
 - As a result of the hypotheses, there was a statistical difference between the control and test groups.
-no significant difference was found. For this reason, the currently used maximum_bidding can be used.
+No significant difference was found. For this reason, the currently used maximum_bidding can be used.
 
 - Assumption of normality and two-sample T-test p-value, not close to 0.05.
 Due to the size of the difference between them, average bidding should not be used.
