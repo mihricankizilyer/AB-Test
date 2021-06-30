@@ -53,9 +53,9 @@ df_control["Purchase"].mean() # 550.8940587702316
 # The hypothesis test is applied to question this.
 
 
-#############################
+################################
 # A/B Test Hypotheses
-#############################
+################################
 
 """
 H0: M1 = M2
@@ -66,9 +66,10 @@ H1: There is statistically significant difference between Maximum bidding and Av
 """
 
 
-####################################
+################################
 # Hypothesis Testing
-####################################
+################################
+
 
 ############################
 # 1. Assumption Control
