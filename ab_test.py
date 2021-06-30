@@ -4,9 +4,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.stats.api as sms
-from scipy.stats import ttest_1samp, shapiro, levene, ttest_ind, mannwhitneyu, pearsonr, spearmanr, kendalltau, \
-    f_oneway, kruskal
+from scipy.stats import ttest_1samp, shapiro, levene, ttest_ind, mannwhitneyu, pearsonr,\
+    spearmanr, kendalltau, f_oneway, kruskal
 from statsmodels.stats.proportion import proportions_ztest
+
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 10)
@@ -17,6 +18,7 @@ df_control = df_control[["Impression","Click","Purchase","Earning"]]
 
 df_test = pd.read_excel('datasets/5W/ab_testing.xlsx', sheet_name='Test Group')
 df_test = df_test[["Impression","Click","Purchase","Earning"]]
+
 
 def check_df(dataframe, head = 5):
     print("######### Shape #########")
@@ -34,12 +36,14 @@ def check_df(dataframe, head = 5):
 check_df(df_test) # empty observation -> 0
 check_df(df_control) # empty observation-> 0
 
+
 df_test["Purchase"].mean() # 582.1060966484675
 df_control["Purchase"].mean() # 550.8940587702316
 
 # When the average of all values is considered, the test group is larger.
 # But is it accidental or due to changes?
 # The hypothesis test is applied to question this.
+
 
 #############################
 # A/B Test Hypotheses
@@ -53,6 +57,7 @@ H1: M1 != M2
 H1: There is statistically significant difference between Maximum bidding and Average bidding.
 """
 
+
 ####################################
 # Hypothesis Testing
 ####################################
@@ -63,6 +68,7 @@ H1: There is statistically significant difference between Maximum bidding and Av
 
 # - Normality Assumption
 # - Variance Homogeneity
+
 
 #####################
 # Normality Assumption
@@ -93,6 +99,7 @@ Non-parametric
 - It means that the distribution is skewed.
 """
 
+
 #####################
 # Variance Homogeneity
 #####################
@@ -110,6 +117,7 @@ print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 
 # Parametric test (t-test for two samples) is applied since both assumptions cannot be rejected.
 
+
 #####################
 # Two-Sample T-Test
 #####################
@@ -119,18 +127,3 @@ print('Test Stat = %.4f, p-value = %.4f' % (test_stat, pvalue))
 # Result => Test Stat = -0.9416, p-value = 0.3493
 # H0 cannot be REJECTED because the p-value is greater than 0.05.
 # There is no statistical difference between them.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
