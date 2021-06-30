@@ -21,10 +21,10 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.float_format', lambda x: '%.5f' %x)
 
-df_control = pd.read_excel('datasets/5W/ab_testing.xlsx', sheet_name='Control Group')
+df_control = pd.read_excel('ab_testing.xlsx', sheet_name='Control Group')
 df_control = df_control[["Impression","Click","Purchase","Earning"]]
 
-df_test = pd.read_excel('datasets/5W/ab_testing.xlsx', sheet_name='Test Group')
+df_test = pd.read_excel('ab_testing.xlsx', sheet_name='Test Group')
 df_test = df_test[["Impression","Click","Purchase","Earning"]]
 
 
