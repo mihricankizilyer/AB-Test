@@ -1,4 +1,4 @@
-# ``` A/B-Test ```
+# ``` A/B Test ```
 
 
 A/B testing is a method of comparing two versions of a web page or application against each other to determine which performs better.
